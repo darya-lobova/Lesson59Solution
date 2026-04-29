@@ -14,5 +14,10 @@ int main() {
 	init_random(array, size, -20, 50);
 
 	print("Array: " + convert(array, size) + "\n");
+
+	//logic
+
+	remove(array);
+
 	return 0;
 }
