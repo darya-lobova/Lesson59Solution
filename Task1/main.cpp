@@ -1,4 +1,5 @@
 #include "util.h"
+#include "logic.h"
 
 int main() {
 	int size;
@@ -16,6 +17,11 @@ int main() {
 	print("Array: " + convert(array, size) + "\n");
 
 	//logic
+	int count = count_local_minimums(array, size);
+	int* minimums = get_all_local_minimums(array, size);
+	print("All local minimums: " + convert(minimums, count) + "\n");
+	print("Sum of local minimums is " 
+		+ to_string(sum_local_minimums(minimums, count)) + ".\n");
 
 	remove(array);
 
